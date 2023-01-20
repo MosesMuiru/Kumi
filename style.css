@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#header{
+    color: white;
+    background:linear-gradient(90deg, rgba(40,40,40,0.5) 0%, rgba(71, 70, 70, 0.7) 80%),url(./assets/living-room-3539587_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 20px 7%;
+
+}
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 13px;
+
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+
+}
+li a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: white;
+    position: absolute;
+    /* left: 40px; */
+    /* padding-right: ; */
+    left: 0;
+    bottom: -6px;
+    transition: all 300ms linear;
+    
+   
+
+}
+li a:hover::after{
+    color: wheat;
+    width: 100%;
+
+}
+.header-text{
+   margin-top: 20%;
+   margin-left: auto;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+
+.text h2{
+    /* word-break: break-all; */
+    font-size: 70px;
+    line-height: 5.5rem;
+    margin: 30px 0;
+
+}
+.text p{
+    line-height: 2rem;
+    font-size: 1.4rem;
+}
+.btn{
+    border: 1px solid white;
+    margin-top: 20px;
+    background-color: inherit;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: all 300ms linear;
+
+
+}
+.btn:hover{
+    /* border:2px solid crimson; */
+    background-color: gray;
+
+}
+/* icons */
+.icons{
+    font-size: 1.7rem;
+    cursor: pointer;
+    display: none;
+    transition: color 300ms linear;
+}
+.icons:hover{
+    color: crimson;
+}
+
+
+/* iamge */
+
+/* 
+about container */
+/* about section */
+.about{
+    margin: 30px;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 10px;
+    margin: 10px 0;
+}
+.about-container:nth-child(even){
+    flex-direction: row-reverse;    
+}
+
+.image-house{
+    max-width: 200vw;
+    height: 300px;
+    /* padding: 10px; */
+}
+.more-info{
+    display: flex;
+    flex-direction: column;
+}
+.more-info h2{ 
+    
+    margin: 2rem 0;
+    line-height: 2rem;
+    font-size: 30px;
+    color: gray;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+   max-width: 400px;
+
+}
+.more-info p{
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    
+}
+.more-info .btn{
+    background-color: gray;
+    transition: all 400ms linear ;
+
+}
+.more-info .btn:hover{
+    border: 1px solid gray;
+    color: black;
+    background-color: inherit;
+    
+}
+
+/* location */ 
+.location-list{
+    padding: 20px;
+    display: grid;
+    width: 100%;
+    /* border: 1px solid red; */
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-rows: auto;
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.location-list img{
+    height: 200px;
+    width: 100%;
+    transition: all 300ms linear;
+}
+.location{
+    overflow: hidden;
+    position: relative;
+    
+
+}
+
+.layer
+{
+    position: absolute; 
+    left: 0;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ;
+    
+    background: linear-gradient(90deg, rgba(40,40,40,0.5) 0%, rgba(71, 70, 70, 0.7) 80%);
+}
+.location p{
+    /* font-weight:300 ; */
+    font-size: 13px;
+    text-transform: capitalize;
+    margin: 10px 0;
+
+}
+
+.location img:hover{
+    transform: scale(1.1);
+}
+/* .location:hover .layer{
+    left: 0;
+} */
+.nairobi:hover .layer{
+    top: 0;
+}
+.pwani:hover .layer{
+    top: 0;
+}
+.koro:hover .layer{
+    top: 0;
+}
+.open-icon{
+    position: absolute;
+    right: 2rem;
+}
+
+
+
+@media only screen and (max-width:720px)
+{
+   
+    .open-icon{
+        display: inline;
+    }
+    .close-icon{
+        display: inline;
+        position: absolute;
+        left: 5px;
+        top: 3px;
+
+
+    }
+    
+    .navlinks{
+        /* display: none; */
+        position: absolute;
+
+        right: -300px;
+        top: 3rem;
+        background: linear-gradient(90deg, rgba(40,40,40,0.5) 0%, rgba(71, 70, 70, 0.7) 80%);
+        width: 130px;       
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+        align-items: center;
+        transition: all 300ms linear;
+        border-radius: 10px 2px 0 10px;
+
+    }
+ 
+    .text{
+        
+        margin: bottom 20px; ;
+    }
+
+    /* the about section */
+    .about-container{
+        
+        display: flex;
+        flex-direction: column;
+
+
+    }
+    .about-container:nth-child(even){
+        flex-direction: column;
+    }
+    .image-house{
+        max-width: 70vh;
+        height: 350px;
+
+
+    }
+   
+}
+@media only screen and (max-width:700){
+    /* image of the houses */
+    
+
+   
+}
+#nam{
+    cursor: pointer;
+    background-color: red;
+}
+
+
+/* footer */
+
+footer{
+    
+    bottom: 0;
+    margin-top: 30px;
+    background: rgb(11, 11, 11);
+    height: 100%;
+    /* padding: 4rem; */
+
+}
+footer .logo{
+    
+}
+.places{
+    list-style: none;
+    font-size: 15px;
+    
+
+}
+
+.part-one{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin: 20px;
+    padding: 2rem;
+}
+.part-one h2{
+    font-size: 2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.footer-container{
+    color: white;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    list-style: none;
+    padding: 20px 0; 
+    
+}
+
+.social-media li{
+    transition: all 300ms linear;
+    font-size: 20px;
+}
+.social-media  i::after{
+    content: "ss";
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.social-media li:hover{
+    color: crimson;
+}
