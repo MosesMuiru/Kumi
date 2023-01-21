@@ -218,6 +218,16 @@ about container */
 .location img:hover{
     transform: scale(1.1);
 }
+
+.location h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    border-bottom: 1px solid gray;
+    width: 200px;
+    margin: auto;
+    color: gray;
+}
 /* .location:hover .layer{
     left: 0;
 } */
@@ -230,10 +240,13 @@ about container */
 .koro:hover .layer{
     top: 0;
 }
+
+
 .open-icon{
     position: absolute;
     right: 2rem;
 }
+
 
 
 
